@@ -1,33 +1,33 @@
+/* Base */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: black;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow-x: hidden;
 }
 
-h1, h2, p, h3, ul {
-    font-family: "Onest", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: white;
-    font-weight: normal;
+h1, h2, h3, p, ul {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #fff;
+  font-weight: normal;
 }
 
-/* Section One */
+/* Hero */
 .section1 {
   min-height: 70vh;
   width: 100vw;
-  margin: 0;
-  padding: 0;
   background-image: linear-gradient(90deg, #f5d245, #ff914d);
-
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.section1 .header-options {
-    position: absolute;
+.header-options {
+  position: absolute;
   top: 2.5%;
   right: 5%;
   display: flex;
@@ -35,75 +35,53 @@ h1, h2, p, h3, ul {
   align-items: center;
 }
 
-.section1 .header-options h1 {
+.header-options h1 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
   padding: 5px 9px;
   border-radius: 10px;
-  display: inline-block;
   transition: background-color .45s ease;
 }
 
-.section1 .header-options a {
+.header-options a {
   text-decoration: none;
   color: inherit;
 }
-
-.section1 .header-options a:hover h1 {
-  background-color: rgba(255, 255, 255, 0.603);
+.header-options a:hover h1 {
+  background-color: rgba(255,255,255,0.6);
   border-radius: 10px;
   cursor: pointer;
 }
 
-.main-content #title {
-    position: static;
-    top: 32%;
-    left: 50%;
-    transform: none;
-    font-size: 85px;
-    font-weight: bold;
+#title {
+  font-size: 85px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.intro-section { overflow: auto; }
-
-/* Intro Section */
 .intro-section {
-    background-color: black;
-    min-height: 70vh;
-    width: 100vw;
-    margin-top: 0;
-    /*
-    width: 90%;
-    height: auto;
-    border-radius: 47px;
-    position: absolute;
-    left: 50%;
-    margin-top: 20px;
-    transform: translate(-50%);
-    justify-content: center;
-    */
+  width: 100vw;
+  background: #000;
+  padding: 0 8% 40px;
+  box-sizing: border-box;
 }
 
-.intro-section h1 {
-    transform: translate(8%, 45%);
-    font-size: 28px;
+.intro-title {
+  font-size: 28px;
+  margin: 40px 0 16px;
+  transform: translateX(0);
 }
 
-.intro-section .goal-block {
+.goal-block {
   display: flex;
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
-  padding: 40px 6%;
+  padding: 20px 0 40px;
 }
 
-.intro-section .goal-block h2:hover {
-    background-color: rgba(255, 255, 255, 0.086);
-  cursor: pointer;
-}
-
-.intro-section .goal-block h2 {
+.goal-block h2 {
   flex: 1 1 28%;
   max-width: 28%;
   min-width: 260px;
@@ -113,85 +91,86 @@ h1, h2, p, h3, ul {
   justify-content: center;
   text-align: center;
   padding: 24px;
-  border: 2px solid white;
+  border: 2px solid #fff;
   border-radius: 28px;
   box-sizing: border-box;
-  transition: background-color 0.18s ease, transform 0.18s ease;
+  transition: background-color .18s ease, transform .18s ease;
+}
+.goal-block h2:hover {
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-4px);
+  cursor: pointer;
 }
 
-.intro-section h3 {
-    font-size: 26px;
-  font-weight: normal;
-  margin: 20px 0 20px 0;
-  text-align: left;
-
-  transform: translate(8%, 45%);
+.who-title {
+  font-size: 26px;
+  margin: 20px 0 10px;
 }
-
-.intro-section p {
+.who-lead {
   font-size: 22px;
   line-height: 1.5;
-  margin: 0 0 10px 0;
-
-  transform: translate(8%, 45%);
+  margin: 0 0 10px;
 }
-
-.intro-section ul {
-  list-style-type: circle;
-  margin: 10px 0 20px 40px;
+.who-list {
+  list-style: circle;
+  margin: 10px 0 24px 24px;
   padding: 0;
-
-  transform: translate(8%, 45%);
 }
-
-.intro-section ul li {
+.who-list li {
   font-size: 22px;
-  margin: 8px;
-  line-height: 1.4;
-
-  transform: translate(8%, 45%);
+  line-height: 1.5;
+  margin: 8px 0;
 }
 
-.resources-intro-section { overflow: auto; }
-
-.resources-intro-section {
-    background-color: black;
-    min-height: 70vh;
-    width: 100vw;
-    align-items: center;
-    text-align: center;
+.outro-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 20px;
 }
 
-.intro-section h3#end-h3 {
+#end-h3 {
+  margin: 0;
   font-size: 26px;
   font-weight: normal;
-  margin-top: 100px;
-  margin-bottom: 100px;
 }
 
-/* bottom-right avatar block */
-.avatar-section{
-  background: #000;           /* same as your page */
-  padding: 0 8% 40px;         /* right/left gutters like your intro */
-  box-sizing: border-box;
-}
-
-.avatar-holder{
-  width: 280px;               /* size of the viewer */
-  margin-left: auto;          /* pushes it to the right */
+.avatar-holder {
+  width: 320px;
   text-align: right;
 }
 
-.avatar-holder model-viewer{
+.avatar-holder model-viewer {
   width: 100%;
-  height: 280px;
-  background: #000;           /* blends into page background */
-  border: none;
-}
+  height: 320px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  overflow: hidden;
+  box-shadow: none;
 
-.avatar-holder .avatar-cap{
+  --progress-bar-color: transparent !important;
+  --progress-bar-height: 0px !important;
+}
+model-viewer::part(progress-bar){ display:none !important; }
+
+.avatar-cap {
   color: #fff;
   opacity: .75;
   font-size: 16px;
   margin-top: 6px;
+}
+
+@media (max-width: 800px) {
+  .outro-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .avatar-holder {
+    width: 260px;
+  }
+  .avatar-holder model-viewer {
+    height: 260px;
+  }
 }

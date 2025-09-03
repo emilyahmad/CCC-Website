@@ -1,72 +1,79 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- SEO -->
-        <meta name="description" content="Centerville Robotics">
-        <meta name="keywords" content="FTC, Robotics">
-        <title>CHS Code Club</title>
-         <!-- Links -->
-         <link rel="stylesheet" href="style.css">
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@300..700&family=Onest:wght@100..900&family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
-    </head>
-    <body>
-    <main>
-        <div class="section1">
-            <div class="header-options">
-                <a href="threejs.html"><h1>Home</h1></a>
-                <a href="resources.html"><h1>Resources</h1></a>
-                <a href="contact.html"><h1>Contact Us</h1></a>
-            </div>
-            <!-- Title -->
-            <div class="main-content">
-                <h1 id="title">CHS Code Club</h1>
-            </div>
-        </div>
-       <!-- Intro.. -->
-        <div class="intro-section">
-            <h1>Club goals</h1>
-            <div class="goal-block">
-                <h2>Teach CSA content</h2>
-                <h2>Access to cool workshops, hackathons & paid internships</h2>
-                <h2>Build CHS CS community</h2>
-            </div>
-            <h3>Who should join:</h3>
-            <p>Interested in learning more about computer science/IT?<br>
-            Whether you’re:</p>
-            <ul>
-                <li>Complete beginner & want to learn to code</li>
-                <li>Studying for the AP Computer Science A exam</li>
-                <li>Interested in paid summer internships</li>
-                <li>Looking to enhance previous programming experience</li>
-            </ul>
-            <h3 id="end-h3">code club is for you!</h3>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Centerville Robotics" />
+  <meta name="keywords" content="FTC, Robotics" />
+  <title>CHS Code Club</title>
 
-        </div>
+  <link rel="stylesheet" href="style.css" />
 
-        <script src="script.js"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@300..700&family=Onest:wght@100..900&family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
 
-        <section class="avatar-section">
-  <div class="avatar-holder">
-    <model-viewer src="avatar.glb"
-                  alt="Avaturn avatar"
-                  auto-rotate
-                  camera-controls
-                  rotation-per-second="25deg"
-                  shadow-intensity="1"
-                  exposure="1"
-                  crossorigin="anonymous">
-    </model-viewer>
-    <div class="avatar-cap">(spinnable)</div>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="section1">
+    <nav class="header-options">
+      <a href="index.html"><h1>Home</h1></a>
+      <a href="resources.html"><h1>Resources</h1></a>
+      <a href="contact.html"><h1>Contact Us</h1></a>
+    </nav>
+    <div class="main-content">
+      <h1 id="title">CHS Code Club</h1>
+    </div>
+  </section>
 
-<!-- model-viewer web component (load once per page) -->
+  <!-- Intro -->
+  <section class="intro-section">
+    <h1 class="intro-title">Club goals</h1>
+
+    <div class="goal-block">
+      <h2>Teach CSA content</h2>
+      <h2>Access to cool workshops, hackathons & paid internships</h2>
+      <h2>Build CHS CS community</h2>
+    </div>
+
+    <h3 class="who-title">Who should join:</h3>
+    <p class="who-lead">
+      Interested in learning more about computer science/IT?<br>
+      Whether you’re:
+    </p>
+    <ul class="who-list">
+      <li>Complete beginner & want to learn to code</li>
+      <li>Studying for the AP Computer Science A exam</li>
+      <li>Interested in paid summer internships</li>
+      <li>Looking to enhance previous programming experience</li>
+    </ul>
+
+    <div class="outro-row">
+      <h3 id="end-h3">code club is for you!</h3>
+
+      <div class="avatar-holder">
+        <model-viewer
+          src="avatar.glb"
+          alt="Avaturn avatar"
+          auto-rotate
+          camera-controls
+          interaction-prompt="none"
+          poster-color="transparent"
+          rotation-per-second="25deg"
+          shadow-intensity="1"
+          exposure="1"
+          crossorigin="anonymous">
+        </model-viewer>
+        <div class="avatar-cap">(spinnable)</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-    </main>
-    </body>
+</body>
 </html>
