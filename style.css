@@ -83,3 +83,44 @@ h1, h2, p, h3, ul {
     justify-content: center;
     */
 }
+
+.intro-section h1 {
+    transform: translate(8%, 45%);
+}
+
+.intro-section .goal-block {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 40px 6%;
+}
+
+.intro-section .goal-block a:hover h2 {
+    background-color: rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+
+.intro-section .goal-block h2 {
+  flex: 1 1 28%;
+  max-width: 28%;
+  min-width: 260px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  border: 2px solid white;
+  border-radius: 28px;
+  box-sizing: border-box;
+}
+.resources-intro-section { overflow: auto; }
+
+.resources-intro-section {
+    background-color: black;
+    min-height: 70vh;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+}
