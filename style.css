@@ -120,8 +120,8 @@ h1, h2, p, h3, ul {
 }
 
 .intro-section h3 {
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 26px;
+  font-weight: normal;
   margin: 20px 0 20px 0;
   text-align: left;
 
@@ -129,7 +129,7 @@ h1, h2, p, h3, ul {
 }
 
 .intro-section p {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.5;
   margin: 0 0 10px 0;
 
@@ -145,7 +145,7 @@ h1, h2, p, h3, ul {
 }
 
 .intro-section ul li {
-  font-size: 18px;
+  font-size: 22px;
   margin: 8px;
   line-height: 1.4;
 
@@ -163,7 +163,8 @@ h1, h2, p, h3, ul {
 }
 
 .intro-section h3#end-h3 {
-  font-size: 28px;
+  font-size: 26px;
+  font-weight: normal;
   margin-top: 100px;
   margin-bottom: 100px;
 }
