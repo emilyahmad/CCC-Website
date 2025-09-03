@@ -86,6 +86,7 @@ h1, h2, p, h3, ul {
 
 .intro-section h1 {
     transform: translate(8%, 45%);
+    font-size: 28px;
 }
 
 .intro-section .goal-block {
@@ -96,8 +97,8 @@ h1, h2, p, h3, ul {
   padding: 40px 6%;
 }
 
-.intro-section .goal-block a:hover h2 {
-    background-color: rgba(255,255,255,0.3);
+.intro-section .goal-block h2:hover {
+    background-color: rgba(255, 255, 255, 0.086);
   cursor: pointer;
 }
 
@@ -114,7 +115,43 @@ h1, h2, p, h3, ul {
   border: 2px solid white;
   border-radius: 28px;
   box-sizing: border-box;
+  transition: background-color 0.18s ease, transform 0.18s ease;
 }
+
+.intro-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+  text-align: left;
+
+  transform: translate(8%, 45%);
+}
+
+.intro-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+
+  transform: translate(8%, 45%);
+}
+
+.intro-section ul {
+  list-style-type: circle;
+  margin: 10px 0 20px 40px;
+  padding: 0;
+
+  transform: translate(8%, 45%);
+}
+
+.intro-section ul li {
+  font-size: 18px;
+  margin: 8px;
+  line-height: 1.4;
+
+  transform: translate(8%, 45%);
+}
+
+
 .resources-intro-section { overflow: auto; }
 
 .resources-intro-section {
