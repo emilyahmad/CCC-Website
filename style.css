@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 h1, h2, p, h3, ul {
@@ -50,7 +51,7 @@ h1, h2, p, h3, ul {
 }
 
 .section1 .header-options a:hover h1 {
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.603);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -159,4 +160,10 @@ h1, h2, p, h3, ul {
     width: 100vw;
     align-items: center;
     text-align: center;
+}
+
+.intro-section h3#end-h3 {
+  font-size: 28px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
