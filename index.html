@@ -19,7 +19,7 @@
             <div class="header-options">
                 <a href="threejs.html"><h1>Home</h1></a>
                 <a href="resources.html"><h1>Resources</h1></a>
-                <a href="contact.html"><h1>Contact Us</h1></a></a>
+                <a href="contact.html"><h1>Contact Us</h1></a>
             </div>
             <!-- Title -->
             <div class="main-content">
@@ -48,6 +48,24 @@
         </div>
 
         <script src="script.js"></script>
+
+        <section class="avatar-section">
+  <div class="avatar-holder">
+    <model-viewer src="avatar.glb"
+                  alt="Avaturn avatar"
+                  auto-rotate
+                  camera-controls
+                  rotation-per-second="25deg"
+                  shadow-intensity="1"
+                  exposure="1"
+                  crossorigin="anonymous">
+    </model-viewer>
+    <div class="avatar-cap">(spinnable)</div>
+  </div>
+</section>
+
+<!-- model-viewer web component (load once per page) -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
     </main>
     </body>
