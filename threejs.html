@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>3D Friend (Three.js)</title>
+<style>html,body{margin:0;height:100%;background:#000}canvas{display:block}</style>
+</head>
+<body>
+<script type="module">
+import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
+import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js";
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x000000);
+
+const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 100);
+camera.position.set(0, 1.6, 4);
+
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(innerWidth, innerHeight);
+renderer.setPixelRatio(devicePixelRatio);
+document.body.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+const dir = new THREE.DirectionalLight(0xffffff, 0.8);
+dir.position.set(3,5,2);
+scene.add(dir);
+
+// ground for soft visual reference (optional)
+const g = new THREE.Mesh(
+  new THREE.CylinderGeometry(0.01, 1.5, 0.01, 32),
+  new THREE.MeshBasicMaterial({color:0x222222})
+);
+g.rotation.x = Math.PI/2; g.position.y = 0; // tiny line
+// scene.add(g);
+
+// load your GLB avatar
+const loader = new GLTFLoader();
+let avatar;
+loader.load("avatar.glb", (gltf)=>{
+  avatar = gltf.scene;
+  avatar.position.set(0,0,0);
+  scene.add(avatar);
+
+  // make it a comfy size if huge/tiny:
+  const box = new THREE.Box3().setFromObject(avatar);
+  const size = box.getSize(new THREE.Vector3()).length();
+  const scale = 2 / size; // scale to ~2 units tall
+  avatar.scale.setScalar(scale);
+
+  // add a 3D photo sticker (sprite)
+  const texLoader = new THREE.TextureLoader();
+  texLoader.load("friend.png", (tex)=>{
+    const mat = new THREE.SpriteMaterial({ map: tex, transparent: true });
+    const sprite = new THREE.Sprite(mat);
+    sprite.scale.set(0.8, 0.8, 0.8);    // size of the photo
+    sprite.position.set(0, 1.6, 0.6);   // near head; tweak as needed
+    avatar.add(sprite);                 // attach to avatar so it moves with it
+  });
+});
+
+function onResize(){
+  camera.aspect = innerWidth/innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+}
+addEventListener("resize", onResize);
+
+// spin the model
+function animate(){
+  requestAnimationFrame(animate);
+  if (avatar) avatar.rotation.y += 0.01;
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>
