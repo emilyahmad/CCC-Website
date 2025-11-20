@@ -73,6 +73,10 @@ h1, h2, h3, p, ul {
   transform: translateX(0);
 }
 
+.image-container img {
+  width: 5rem;
+}
+
 .goal-block {
   display: flex;
   justify-content: center;
