@@ -73,8 +73,28 @@ h1, h2, h3, p, ul {
   transform: translateX(0);
 }
 
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0rem;
+}
+
 .image-container img {
-  width: 5rem;
+  width: 25rem;
+  border-radius: 10%;
+}
+
+#middle:hover {
+  transform: rotate(3deg) scale(1.5);
+}
+
+#left:hover, #right:hover {
+  transform: rotate(-3deg) scale(1.5);
+}
+
+.image-container img:hover {
+  z-index: 2;
+  transition: 500ms;
 }
 
 .goal-block {
