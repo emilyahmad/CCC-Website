@@ -194,6 +194,7 @@ model-viewer::part(progress-bar){ display:none !important; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0rem;
+  z-index: 0;
 }
 
 .main-image-container img {
@@ -202,12 +203,17 @@ model-viewer::part(progress-bar){ display:none !important; }
   border-radius: 10%;
 }
 
-.arrow-nav img {
-  width: 3.5rem;
-  display: grid;
-  justify-content: space-around;
+.arrow-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(11rem);
 }
 
+.arrow-nav img {
+  z-index: 1;
+  width: 3rem;
+}
 
 #middle:hover {
   transform: rotate(3deg) scale(1.15);
