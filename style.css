@@ -80,16 +80,18 @@ h1, h2, h3, p, ul {
 }
 
 .image-container img {
-  width: 25rem;
+  width: 22.5rem;
   border-radius: 10%;
 }
 
 #middle:hover {
   transform: rotate(3deg) scale(1.5);
+  cursor: url(https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png), auto;
 }
 
 #left:hover, #right:hover {
   transform: rotate(-3deg) scale(1.5);
+  cursor: url(https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png), auto;
 }
 
 .image-container img:hover {
