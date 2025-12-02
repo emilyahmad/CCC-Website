@@ -52,6 +52,7 @@ h1, h2, h3, p, ul {
   background-color: rgba(255,255,255,0.6);
   border-radius: 10px;
   cursor: pointer;
+  cursor: url("images/bobacursor.png") 16 16, auto;
 }
 
 #title {
@@ -80,16 +81,19 @@ h1, h2, h3, p, ul {
 }
 
 .image-container img {
-  width: 25rem;
+  margin-top: 1.2rem;
+  width: 22.5rem;
   border-radius: 10%;
 }
 
 #middle:hover {
-  transform: rotate(3deg) scale(1.5);
+  transform: rotate(3deg) scale(1.15);
+  cursor: url("images/bobacursor.png") 16 16, auto;
 }
 
 #left:hover, #right:hover {
-  transform: rotate(-3deg) scale(1.5);
+  transform: rotate(-3deg) scale(1.15);
+  cursor: url("images/bobacursor.png") 16 16, auto;
 }
 
 .image-container img:hover {
@@ -123,7 +127,7 @@ h1, h2, h3, p, ul {
 .goal-block h2:hover {
   background-color: rgba(255,255,255,0.1);
   transform: translateY(-4px);
-  cursor: pointer;
+  cursor: url("images/bobacursor.png") 16 16, auto;
 }
 
 .who-title {
