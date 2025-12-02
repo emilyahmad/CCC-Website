@@ -74,33 +74,6 @@ h1, h2, h3, p, ul {
   transform: translateX(0);
 }
 
-.image-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0rem;
-}
-
-.image-container img {
-  margin-top: 1.2rem;
-  width: 22.5rem;
-  border-radius: 10%;
-}
-
-#middle:hover {
-  transform: rotate(3deg) scale(1.15);
-  cursor: url("images/bobacursor.png") 16 16, auto;
-}
-
-#left:hover, #right:hover {
-  transform: rotate(-3deg) scale(1.15);
-  cursor: url("images/bobacursor.png") 16 16, auto;
-}
-
-.image-container img:hover {
-  z-index: 2;
-  transition: 500ms;
-}
-
 .goal-block {
   display: flex;
   justify-content: center;
@@ -201,4 +174,45 @@ model-viewer::part(progress-bar){ display:none !important; }
   .avatar-holder model-viewer {
     height: 360px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0rem;
+}
+
+.main-image-container img {
+  margin-top: 1.2rem;
+  width: 22.5rem;
+  border-radius: 10%;
+}
+
+#middle:hover {
+  transform: rotate(3deg) scale(1.15);
+  cursor: url("images/bobacursor.png") 16 16, auto;
+}
+
+#left:hover, #right:hover {
+  transform: rotate(-3deg) scale(1.15);
+  cursor: url("images/bobacursor.png") 16 16, auto;
+}
+
+.main-image-container img:hover {
+  z-index: 2;
+  transition: 500ms;
 }
