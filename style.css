@@ -85,12 +85,12 @@ h1, h2, h3, p, ul {
 }
 
 #middle:hover {
-  transform: rotate(3deg) scale(1.5);
+  transform: rotate(3deg) scale(1.15);
   cursor: url("images/bobacursor.png") 16 16, auto;
 }
 
 #left:hover, #right:hover {
-  transform: rotate(-3deg) scale(1.5);
+  transform: rotate(-3deg) scale(1.15);
   cursor: url("images/bobacursor.png") 16 16, auto;
 }
 
